@@ -44,10 +44,10 @@ class ViewController: UIViewController, CoinDelegate {
         switch sender.selectedSegmentIndex {
         case 0:
             coinManager.getCoin(currency: "USD", coin: "BTC")
-            view.backgroundColor = .brown
+            view.backgroundColor = .systemBlue
         default:
             coinManager.getCoin(currency: "USD", coin: "ETH")
-            view.backgroundColor = .magenta
+            view.backgroundColor = .systemTeal
             
         }
     }
