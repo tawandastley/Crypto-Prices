@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A96A9A14279578810058706E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A9A13279578810058706E /* MapViewController.swift */; };
 		A99E8F982774B515006D2645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E8F972774B515006D2645 /* AppDelegate.swift */; };
 		A99E8F9A2774B515006D2645 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E8F992774B515006D2645 /* SceneDelegate.swift */; };
 		A99E8F9C2774B515006D2645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E8F9B2774B515006D2645 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A96A9A13279578810058706E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A99E8F942774B515006D2645 /* Crypto Prices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Prices.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99E8F972774B515006D2645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A99E8F992774B515006D2645 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A96A9A0F2795784B0058706E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A99E8F9B2774B515006D2645 /* ViewController.swift */,
+				A96A9A13279578810058706E /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A96A9A11279578580058706E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A99E8F9D2774B515006D2645 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A99E8F8B2774B515006D2645 = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +86,8 @@
 				A99E8FAF2775B708006D2645 /* Model */,
 				A99E8F972774B515006D2645 /* AppDelegate.swift */,
 				A99E8F992774B515006D2645 /* SceneDelegate.swift */,
-				A99E8F9B2774B515006D2645 /* ViewController.swift */,
-				A99E8F9D2774B515006D2645 /* Main.storyboard */,
+				A96A9A0F2795784B0058706E /* Controller */,
+				A96A9A11279578580058706E /* View */,
 				A99E8FA32774B527006D2645 /* Assets.xcassets */,
 				A99E8FA52774B527006D2645 /* LaunchScreen.storyboard */,
 				A99E8FA82774B527006D2645 /* Info.plist */,
@@ -164,6 +183,7 @@
 				A99E8F982774B515006D2645 /* AppDelegate.swift in Sources */,
 				A99E8F9A2774B515006D2645 /* SceneDelegate.swift in Sources */,
 				A99E8FB8277B3E54006D2645 /* CoinDataModel.swift in Sources */,
+				A96A9A14279578810058706E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

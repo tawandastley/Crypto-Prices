@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qqI-Hz-Cc4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crypto_Prices" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,16 +123,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bL-xF-N64">
+                                        <rect key="frame" x="69" y="338" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="JEj-NN-YQs" firstAttribute="centerX" secondItem="CJX-X4-qi6" secondAttribute="centerX" id="5MQ-dJ-8Qj"/>
                                     <constraint firstItem="CJX-X4-qi6" firstAttribute="top" secondItem="5dp-bh-6GP" secondAttribute="bottom" constant="39" id="60a-41-oTQ"/>
+                                    <constraint firstItem="8bL-xF-N64" firstAttribute="leading" secondItem="Y9z-TW-rCL" secondAttribute="leading" id="Axm-Bk-NK7"/>
                                     <constraint firstItem="5dp-bh-6GP" firstAttribute="centerX" secondItem="yaV-yh-Yp0" secondAttribute="centerX" id="BnD-i0-aIx"/>
                                     <constraint firstItem="JEj-NN-YQs" firstAttribute="leading" secondItem="yaV-yh-Yp0" secondAttribute="leadingMargin" id="Cbv-t2-gS3"/>
                                     <constraint firstItem="5dp-bh-6GP" firstAttribute="top" secondItem="yaV-yh-Yp0" secondAttribute="top" constant="154" id="DnU-1q-KI6"/>
                                     <constraint firstItem="Y9z-TW-rCL" firstAttribute="leading" secondItem="yaV-yh-Yp0" secondAttribute="leading" constant="69" id="Jar-aI-bbc"/>
                                     <constraint firstItem="Y9z-TW-rCL" firstAttribute="top" secondItem="yaV-yh-Yp0" secondAttribute="top" constant="406" id="ZEf-vs-Dqr"/>
                                     <constraint firstItem="CJX-X4-qi6" firstAttribute="leading" secondItem="yaV-yh-Yp0" secondAttribute="leading" constant="103" id="fBa-tt-gLD"/>
+                                    <constraint firstItem="Y9z-TW-rCL" firstAttribute="top" secondItem="8bL-xF-N64" secondAttribute="bottom" constant="68" id="ssx-uf-owN"/>
                                     <constraint firstAttribute="bottom" secondItem="JEj-NN-YQs" secondAttribute="bottom" constant="24" id="tEh-a1-Bl1"/>
                                 </constraints>
                             </view>
@@ -146,8 +154,10 @@
                             <constraint firstItem="yaV-yh-Yp0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="jYy-4R-FNO"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2qL-pg-RDp"/>
                     <connections>
                         <outlet property="chinesYuanValue" destination="jUu-Xb-Yu0" id="Ihs-7L-HAx"/>
+                        <outlet property="errorLabel" destination="8bL-xF-N64" id="OsH-ae-8tR"/>
                         <outlet property="poundvalue" destination="z3k-2e-tFe" id="3V9-p5-rcS"/>
                         <outlet property="saRandvalue" destination="YYP-bR-nSK" id="An0-Xg-bxb"/>
                         <outlet property="usdValue" destination="uZ4-nL-nWv" id="KWZ-44-GvV"/>
@@ -155,7 +165,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="923.1884057971015" y="102.45535714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eWx-o4-WF1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qqI-Hz-Cc4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="toa-PE-aD6">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="nwP-sI-ooN"/>
+                        <segue destination="ceS-Js-w9D" kind="relationship" relationship="viewControllers" id="6d3-Zr-DNg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhi-ES-YC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="13.043478260869566" y="102.45535714285714"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="26U-ws-afb">
+            <objects>
+                <viewController id="ceS-Js-w9D" customClass="MapViewController" customModule="Crypto_Prices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33p-EK-KO8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QmH-Df-hdG">
+                                <rect key="frame" x="0.0" y="36" width="414" height="303"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NTo-Kq-mfP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NTo-Kq-mfP" firstAttribute="bottom" secondItem="QmH-Df-hdG" secondAttribute="bottom" constant="474" id="JEQ-Pn-Tie"/>
+                            <constraint firstItem="QmH-Df-hdG" firstAttribute="top" secondItem="33p-EK-KO8" secondAttribute="topMargin" constant="-8" id="SmY-nf-ore"/>
+                            <constraint firstItem="QmH-Df-hdG" firstAttribute="leading" secondItem="NTo-Kq-mfP" secondAttribute="leading" id="ZLX-tX-4wA"/>
+                            <constraint firstItem="QmH-Df-hdG" firstAttribute="centerX" secondItem="33p-EK-KO8" secondAttribute="centerX" id="ncy-qa-KOc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="A5d-8X-QpZ"/>
+                    <connections>
+                        <outlet property="mapView" destination="QmH-Df-hdG" id="iNn-3v-3Uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1G-Op-9S2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663.768115942029" y="549.77678571428567"/>
         </scene>
     </scenes>
     <resources>

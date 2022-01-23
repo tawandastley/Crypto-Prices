@@ -17,6 +17,7 @@ class ViewController: UIViewController, CoinDelegate {
     @IBOutlet weak var poundvalue: UILabel!
     @IBOutlet weak var chinesYuanValue: UILabel!
     @IBOutlet weak var saRandvalue: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
        
@@ -37,7 +38,9 @@ class ViewController: UIViewController, CoinDelegate {
         }
     }
     func didFailWithError(error: Error) {
-        
+        DispatchQueue.main.async {
+            self.errorLabel.text = error.localizedDescription
+        }
     }
     
     @IBAction func didChageCoin(_ sender: UISegmentedControl) {
